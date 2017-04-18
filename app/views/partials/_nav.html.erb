@@ -46,12 +46,12 @@
                 <a class="dropdown-toggle btn btn-default btn-outline btn-circle" data-toggle="dropdown" href="#"><%= current_user.email %>
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'%></a></li>
-                  <li><a href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%></a></li>
+                  <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'%></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%></li>
                   <li><a href="#">Dashboard</a></li>
                 <% else %>
-                  <li><a href="#"><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'%></a></li>
-                  <li><a href="#"><%= link_to "Login", new_user_session_path, :class => 'navbar-link'%></a></li>
+                  <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'%></li>
+                  <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'%></li>
                   <li><a href="#">Dashboard</a></li>
                 </ul>
               </li>
