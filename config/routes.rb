@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'pages/catalog'
 
+  get 'pages/about'
+
   get 'pages/contact'
 
   get 'pages/thoughts'
