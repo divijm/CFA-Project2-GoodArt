@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Oh hey!
 
-Things you may want to cover:
+Thanks for visiting - more coming soon! :)
 
-* Ruby version
+In the meantime, enjoy yourself and have a good time -
 
-* System dependencies
+## 1
 
-* Configuration
+Why did the Rabbit cross the road?
 
-* Database creation
+Because he hasn't chicken!
 
-* Database initialization
+## 2
 
-* How to run the test suite
+Knock, knock.
+Who’s there?
+Lettuce.
+Lettuce who?
+Lettuce in it’s cold out here.
 
-* Services (job queues, cache servers, search engines, etc.)
+## 3
 
-* Deployment instructions
+How many South Americans does it take to change a lightbulb?
 
-* ...
+A Brazilian!
+
+## 4
+
+How does a train eat?
+
+It goes CHEW CHEEWW!
+
+## 5
+
+What's the best thing about living in Switzerland?
+
+I don't know but the flag is a big plus!
+
+## That's it for now folks!
