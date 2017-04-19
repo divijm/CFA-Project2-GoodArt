@@ -1,19 +1,4 @@
-class PagesController < ApplicationController
-  def home
-  end
-
-  def artists
-  end
-
-  def catalog
-  end
-
-  def contact
-  end
-
-  def thoughts
-  end
-
+class ContactController < ApplicationController
   def index
   end
 
@@ -35,5 +20,5 @@ class PagesController < ApplicationController
     end
 
   end
-
+  
 end
