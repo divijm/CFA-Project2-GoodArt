@@ -1,4 +1,18 @@
 <h1>Contact Us!</h1>
 
+<div class="container">
+<div class="col-md-6">
 
-<p>Email us at info@goodart.com</p>
+  <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% elsif flash[:warning] %>
+      <div class="alert alert-danger"><%= flash[:warning] %></div>
+    <% else %>
+  <% end %>
+<%= simple_form_for :contact do |f| %>
+    <%= f.input :email, placeholder: 'type yo email here!' %>
+    <%= f.input :message, placeholder: 'type yo message here!', :as => :text %>
+    <%= f.button :submit, "Send" %>
+<% end %>
+</div>
+</div>

@@ -13,4 +13,11 @@ class PagesController < ApplicationController
 
   def thoughts
   end
+
+  def index
+  end
+
+  def mail
+  end
+
 end
