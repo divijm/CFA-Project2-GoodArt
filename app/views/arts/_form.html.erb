@@ -38,13 +38,12 @@
 
   <div class="field">
     <%= f.label :medium %>
-    <%= f.text_field :medium %>
+    <%= f.select :medium, ['Sketch', 'Graphite', 'Fusain', 'Pastel', 'Ink', 'Canvas', 'Plaster', 'Wood', 'Other']%>
   </div>
 
   <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <%= f.select :location, ['Sydney', 'Melbourne', 'Brisbane']%>
+    <%= f.label :location %>r
+    <%= f.select :location, ['Sydney', 'Melbourne', 'Brisbane', 'Other']%>
   </div>
 
   <div class="field">
