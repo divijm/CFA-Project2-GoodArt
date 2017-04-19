@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= f.label :size %>
-    <%= f.text_field :size %>
+    <%= f.select :size, ['Small', 'Medium', 'Large', 'Extra Large']%>
   </div>
 
   <div class="field">
@@ -44,16 +44,12 @@
   <div class="field">
     <%= f.label :location %>
     <%= f.text_field :location %>
+    <%= f.select :location, ['Sydney', 'Melbourne', 'Brisbane']%>
   </div>
 
   <div class="field">
     <%= f.label :date_made %>
     <%= f.date_select :date_made %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
   </div>
 
   <div class="actions">
