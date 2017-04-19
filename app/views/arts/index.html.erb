@@ -20,6 +20,7 @@
   <tbody>
     <% @arts.each do |art| %>
       <tr>
+        <td><%= image_tag art.image.url(:thumb) %></td>
         <td><%= art.title %></td>
         <td><%= art.description %></td>
         <td><%= art.price %></td>
