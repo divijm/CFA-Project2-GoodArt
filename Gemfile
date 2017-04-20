@@ -21,6 +21,7 @@ gem 'simple_form'
 gem "rolify"
 gem 'omniauth-facebook'
 gem 'ratyrate'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platform: :mri
