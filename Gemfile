@@ -20,6 +20,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'simple_form'
 gem "rolify"
 gem 'omniauth-facebook'
+gem 'ratyrate'
 
 group :development, :test do
   gem 'byebug', platform: :mri

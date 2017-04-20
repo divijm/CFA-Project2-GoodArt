@@ -14,6 +14,7 @@
       <th>Location</th>
       <th>Date made</th>
       <th>User</th>
+      <th>Rating</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +31,7 @@
         <td><%= art.location %></td>
         <td><%= art.date_made %></td>
         <td><%= art.user.email %></td>
+        <td><%= rating_for art, 'rating', star: 5 %></td>
         <td><%= link_to 'Show', art %></td>
         <td><%= link_to 'Edit', edit_art_path(art) %></td>
         <td><%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></td>
