@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :artists
   post '/rate' => 'rater#create', :as => 'rate'
   resources :arts
 

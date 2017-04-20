@@ -9,6 +9,14 @@ class ApplicationController < ActionController::Base
       added_attrs = [:username, :email, :password, :password_confirmation, :remember_me]
       devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
       devise_parameter_sanitizer.permit :account_update, keys: added_attrs
+  end
+
+  def after_sign_up_path_for(resource)
+    # after_sign_in_path_for(resource)
+    if current_user.signed_in?
+        redirect_to :back
     end
+
+  end
 
 end

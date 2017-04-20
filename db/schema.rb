@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420020929) do
+ActiveRecord::Schema.define(version: 20170420043855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_artists_on_user_id", using: :btree
+  end
 
   create_table "arts", force: :cascade do |t|
     t.string   "title"
@@ -30,6 +40,8 @@ ActiveRecord::Schema.define(version: 20170420020929) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "artist_id"
+    t.index ["artist_id"], name: "index_arts_on_artist_id", using: :btree
     t.index ["user_id"], name: "index_arts_on_user_id", using: :btree
   end
 
@@ -108,5 +120,7 @@ ActiveRecord::Schema.define(version: 20170420020929) do
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
   end
 
+  add_foreign_key "artists", "users"
+  add_foreign_key "arts", "artists"
   add_foreign_key "arts", "users"
 end
