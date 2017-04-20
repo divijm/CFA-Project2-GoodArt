@@ -40,8 +40,12 @@
 
 <br>
 
-<% if current_user.has_role? :artist %>
-<%= link_to 'New Art', new_art_path %>
+<% if user_signed_in? %>
+  <% if current_user.has_role? :artist %>
+    <%= link_to 'New Art', new_art_path %>
+  <% else %>
+    <%= link_to 'Join as an Artist!', pages_artists_path %>
+  <% end %>
 <% else %>
-<%= link_to 'Join as an Artist!', pages_artists_path %>
+  <%= link_to 'Join as an Artist!', pages_artists_path %>
 <% end %>
