@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @art.image.url(:medium) %> 
+<%= image_tag @art.image.url(:medium) %>
 
 <p>
   <strong>Title:</strong>
@@ -40,6 +40,11 @@
 <p>
   <strong>User:</strong>
   <%= @art.user.email %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= rating_for @art, 'rating', star: 5 %>
 </p>
 
 <%= link_to 'Edit', edit_art_path(@art) %> |
