@@ -47,5 +47,9 @@
   <%= rating_for @art, 'rating', star: 5 %>
 </p>
 
+<%= render 'partials/comments' %>
+
+<script id="dsq-count-scr" src="//goodart.disqus.com/count.js" async></script>
+
 <%= link_to 'Edit', edit_art_path(@art) %> |
 <%= link_to 'Back', arts_path %>
