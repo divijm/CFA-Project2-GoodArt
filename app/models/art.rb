@@ -7,4 +7,9 @@ class Art < ApplicationRecord
 
   ratyrate_rateable "rating"
 
+  def index
+  @q = Art.ransack(params[:q])
+  @arts = @q.result(distinct: true)
+  end
+
 end

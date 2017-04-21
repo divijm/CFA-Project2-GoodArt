@@ -4,10 +4,8 @@ class ArtsController < ApplicationController
   # GET /arts
   # GET /arts.json
   def index
-    @arts = Art.all
-
-    # @q = Art.search(params[:q])
-    # @arts = @q.result(distinct: true)
+    @q = Art.ransack(params[:q])
+    @arts = @q.result
   end
 
   # GET /arts/1
