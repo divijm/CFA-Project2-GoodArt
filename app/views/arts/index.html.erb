@@ -3,8 +3,8 @@
 <h1>Arts</h1>
 
 <%= search_form_for @q do |f| %>
-  <%= f.label :title_or_description_or_size_or_medium_or_location %>
-  <%= f.search_field :title_or_description_or_size_or_medium_or_location %>
+  <%= f.label :search %>
+  <%= f.search_field :title_or_description_or_size_or_medium_or_location_cont %>
   <%= f.submit %>
 <% end %>
 
