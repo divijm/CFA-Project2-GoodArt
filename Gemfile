@@ -22,6 +22,7 @@ gem "rolify"
 gem 'omniauth-facebook'
 gem 'ratyrate'
 gem 'ransack'
+gem 'stripe'
 
 group :development, :test do
   gem 'byebug', platform: :mri

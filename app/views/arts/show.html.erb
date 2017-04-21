@@ -47,6 +47,14 @@
   <%= rating_for @art, 'rating', star: 5 %>
 </p>
 
+<% if user_signed_in? %>
+<p>
+  <%= render 'partials/stripe', art: @art %>
+</p>
+
+<% else %>
+<% end %>
+
 <%= render 'partials/comments' %>
 
 <script id="dsq-count-scr" src="//goodart.disqus.com/count.js" async></script>
