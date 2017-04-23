@@ -5,6 +5,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Image</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Description</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @artists.each do |artist| %>
       <tr>
+        <td><%= image_tag artist.profilepic.url(:thumb) %></td>
         <td><%= artist.first_name %></td>
         <td><%= artist.last_name %></td>
         <td><%= artist.description %></td>

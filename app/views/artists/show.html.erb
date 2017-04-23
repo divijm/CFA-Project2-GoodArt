@@ -20,5 +20,7 @@
   <%= @artist.user.inspect %>
 </p>
 
+<%= image_tag @artist.profilepic.url(:medium) %>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
