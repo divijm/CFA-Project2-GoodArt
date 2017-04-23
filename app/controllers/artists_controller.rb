@@ -5,6 +5,10 @@ class ArtistsController < ApplicationController
   # GET /artists.json
   def index
     @artists = Artist.all
+    @hash = Gmaps4rails.build_markers(@artists) do |artist, marker|
+    marker.lat artist.latitude
+    marker.lng artist.longitude
+    end   
   end
 
   # GET /artists/1
@@ -70,6 +74,6 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:first_name, :last_name, :profilepic, :description, :user_id, :art_id)
+      params.require(:artist).permit(:first_name, :last_name, :profilepic, :description, :user_id, :art_id, :latitude, :longitude, :address)
     end
 end
