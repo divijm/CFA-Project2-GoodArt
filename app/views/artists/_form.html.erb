@@ -1,10 +1,13 @@
-<%= simple_form_for(@artist) do |f| %>
+
+<%= simple_form_for @artist, html: { multipart: true } do |f| %>
+
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :description %>
+    <%= f.file_field :profilepic %>
   </div>
 
   <div class="form-actions">
