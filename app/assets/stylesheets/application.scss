@@ -16,14 +16,3 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-body {
-  padding-top: 80px;
-}
-
-#map img {
-  max-width: none;
-}
-#map label {
-  width: auto; display:inline;
-} 

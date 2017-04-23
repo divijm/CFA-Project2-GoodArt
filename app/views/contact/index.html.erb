@@ -1,18 +1,68 @@
-<h1>Contact Us!</h1>
-
-<div class="container">
-<div class="col-md-6">
-
-  <% if flash[:notice] %>
-      <div class="notice"><%= flash[:notice] %></div>
-    <% elsif flash[:warning] %>
-      <div class="alert alert-danger"><%= flash[:warning] %></div>
-    <% else %>
-  <% end %>
-<%= simple_form_for :contact do |f| %>
-    <%= f.input :email, placeholder: 'type yo email here!' %>
-    <%= f.input :message, placeholder: 'type yo message here!', :as => :text %>
-    <%= f.button :submit, "Send" %>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% elsif flash[:warning] %>
+  <div class="alert alert-danger"><%= flash[:warning] %></div>
+<% else %>
 <% end %>
-</div>
-</div>
+
+<!-- *****************************************************************************************************************
+ BLUE WRAP
+ ***************************************************************************************************************** -->
+<div id="blue">
+    <div class="container">
+    <div class="row">
+      <h3>Contact.</h3>
+    </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
+<!-- *****************************************************************************************************************
+ CONTACT WRAP
+ ***************************************************************************************************************** -->
+
+ <!-- <div id="contactwrap"></div> -->
+
+<!-- *****************************************************************************************************************
+ CONTACT FORMS
+ ***************************************************************************************************************** -->
+
+ <div class="container mtb">
+  <div class="row">
+    <div class="col-lg-8">
+      <h4>Just Get In Touch!</h4>
+      <div class="hline"></div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <form role="form">
+          <%= simple_form_for :contact do |f| %>
+          <div class="form-group">
+              <label for="InputEmail1">Email</label>
+              <%= f.input :email, placeholder: 'E.g. john.smith@gmail.com' %>
+          </div>
+          <div class="form-group">
+            <label for="message1">Message</label>
+              <%= f.input :message, placeholder: 'type yo message here!', :as => :text %>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-theme">Submit</button>
+              <%= f.button :submit, "Send" %>
+          </div>
+          <% end %>
+        </form>
+    </div>
+
+    <div class="col-lg-4">
+      <h4>Our Address</h4>
+      <div class="hline"></div>
+        <p>
+          200 Oxford Street,<br/>
+          Sydney, NSW<br/>
+          2000, Australia.<br/>
+        </p>
+        <p>
+          Email: info@goodart.com<br/>
+          Tel: 0420 123 456
+        </p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    </div>
+  </div>
+ </div>
