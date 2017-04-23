@@ -23,6 +23,8 @@ gem 'omniauth-facebook'
 gem 'ratyrate'
 gem 'ransack'
 gem 'stripe'
+gem 'gmaps4rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platform: :mri
