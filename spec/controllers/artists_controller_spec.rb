@@ -44,6 +44,24 @@ RSpec.describe ArtistsController, type: :controller do
     end
   end
 
+  describe "GET #test" do
+     it "can sign up as an artist if logged in as a buyer who isn't an artist" do
+       user = build(:user, :role => "buyer")
+       controller.sign_in user
+       get :new
+       expect(response).to have_http_status(:success)
+     end
+   end
+
+   describe "GET #test" do
+      it "can sign up as an artist if logged in as a buyer who isn't an artist" do
+        user = build(:user, :role => "buyer")
+        controller.sign_in user
+        get :new
+        expect(response).to have_http_status(:success)
+      end
+    end
+
   describe "GET #show" do
     it "assigns the requested artist as @artist" do
       artist = Artist.create! valid_attributes
