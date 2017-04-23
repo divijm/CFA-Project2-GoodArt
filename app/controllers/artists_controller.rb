@@ -5,6 +5,10 @@ class ArtistsController < ApplicationController
   # GET /artists.json
   def index
     @artists = Artist.all
+    @hash = Gmaps4rails.build_markers(@artists) do |artist, marker|
+    marker.lat artist.latitude
+    marker.lng artist.longitude
+    end   
   end
 
   # GET /artists/1
