@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dezelv9iz
+  api_key: <%= ENV['CLOUDINARY_API'] %>
+  api_secret: <%= ENV['CLOUDINARY_SECRET'] %>
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dezelv9iz
+  api_key: <%= ENV['CLOUDINARY_API'] %>
+  api_secret: <%= ENV['CLOUDINARY_SECRET'] %>
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dezelv9iz
+  api_key: <%= ENV['CLOUDINARY_API'] %>
+  api_secret: <%= ENV['CLOUDINARY_SECRET'] %>
+  enhance_image_tag: true
+  static_image_support: false

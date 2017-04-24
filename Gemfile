@@ -25,6 +25,7 @@ gem 'ransack'
 gem 'stripe'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'paperclip-cloudinary'
 
 group :development, :test do
   gem 'byebug', platform: :mri
