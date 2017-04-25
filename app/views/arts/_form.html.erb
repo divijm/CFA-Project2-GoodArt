@@ -1,3 +1,6 @@
+
+<div class="container">
+
 <%= form_for @art, html: { multipart: true } do |f| %>
   <% if art.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +13,10 @@
       </ul>
     </div>
   <% end %>
+
+  <%= link_to 'Back', arts_path, class: 'btn btn-default' %>
+
+  <br><br>
 
   <div class="field">
     <%= f.label :image %>
@@ -52,6 +59,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-theme' %>
   </div>
 <% end %>
+
+</div>
+
+<br><br><br>

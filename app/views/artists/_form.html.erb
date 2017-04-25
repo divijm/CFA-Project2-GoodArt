@@ -1,15 +1,19 @@
 
+<div class="container">
 <%= simple_form_for @artist, html: { multipart: true } do |f| %>
 
   <%= f.error_notification %>
 
+  <%= link_to 'Back', artists_path, class: 'btn btn-default' %>
+  <br>
+  <br>
   <div class="form-inputs">
-    <%= f.input :first_name %>
+    <%= f.input :first_name%>
     <%= f.input :last_name %>
     <%= f.input :description %>
     <%= f.file_field :profilepic %>
-    <%= f.input :latitude %>
-    <%= f.input :longitude %>
+    <%#= f.input :latitude %>
+    <%#= f.input :longitude %>
     <%= f.input :address %>
   </div>
 
@@ -17,3 +21,7 @@
     <%= f.button :submit, class: "btn btn-theme" %>
   </div>
 <% end %>
+
+</div>
+
+<br><br><br>

@@ -88,11 +88,11 @@ SEARCH AND ARTWORK LOOP
           <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
         <% else %>
           <h3>Are you an Artist?</h3>
-          <%= link_to 'Find out more!', new_artist_path, class: 'btn btn-theme' %>
+          <%= link_to 'Find out more!', artists_path, class: 'btn btn-theme' %>
         <% end %>
       <% else %>
         <h3>Are you an Artist?</h3>
-        <%= link_to 'Find out more!', new_user_registration_path, class: 'btn btn-theme' %>
+        <%= link_to 'Find out more!', artists_path, class: 'btn btn-theme' %>
       <% end %>
     </div>
 
