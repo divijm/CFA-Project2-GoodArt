@@ -1,3 +1,62 @@
 <h1>Art For You</h1>
 
 <p>These are the all the artworks available!</p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<div class = "container">
+     <div class="flex-container">
+         <div class=" form-login">
+           <div class="light-well">
+             <h2 class="page-header text-center">Sign in to Dopey</h2>
+
+               <%= form_for resource, as: resource_name, url: session_path(resource_name),
+                           html: { class: "form-horizontal center"} do |f| %>
+                         <div class="form-group">
+                             <%= f.email_field :email, autofocus: true, placeholder: "Email Address (john@example.com)", class: "form-control" %>
+                         </div>
+
+                         <div class="form-group">
+                             <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>
+                         </div>
+
+                         <% if devise_mapping.rememberable? -%>
+                           <div class="form-group">
+                             <div class="col-sm-10">
+                               <div class="checkbox">
+                                 <label>
+                                   <%= f.check_box :remember_me %> &nbsp Remember me
+                                 </label>
+                               </div>
+                             </div>
+                           </div>
+                         <% end -%>
+
+                    <div class="actions">
+                        <%= f.submit "Log in", class: "btn btn-success btn-block" %>
+                    </div>
+               <% end %>
+
+          </div>
+          <br>
+
+          <div class = "form-group handy-margin-bottom">
+                <%= render "devise/shared/links"%>
+          </div>
+      </div>
+   </div>
+</div>
