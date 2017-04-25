@@ -1,4 +1,29 @@
+<div id="blue">
+    <div class="container">
+    <div class="row">
+      <h3><%= @artist.first_name %><%= @artist.last_name %></h3>
+    </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
+<div class="container">
+  <% if user_signed_in? %>
+    <% if current_user.has_role? :admin %>
+    <%= link_to 'Edit', edit_artist_path(@artist), class: 'btn btn-success' %> |
+    <%= link_to 'Back', artists_path, class: 'btn btn-default'%>
+    <% else %>
+    <%= link_to 'Back', artists_path, class: 'btn btn-default'%>
+    <% end %>
+  <% else %>
+    <%= link_to 'Back', artists_path, class: 'btn btn-default'%>
+  <% end %>
+
+
 <p id="notice"><%= notice %></p>
+
+<hr>
+
+<%= image_tag @artist.profilepic.url(:large) %>
 
 <p>
   <strong>First name:</strong>
@@ -15,17 +40,21 @@
   <%= @artist.description %>
 </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @artist.user.inspect %>
+<!-- <p>
+  <strong>Aris:</strong>
+  <%#= @artist.user.inspect %>
 </p>
 
 <p>
   <strong>Artist:</strong>
-  <%= @artist.inspect %>
+  <%#= @artist.inspect %>
 </p>
 
-<%= image_tag @artist.profilepic.url(:medium) %>
+<p>
+  <strong>Artist:</strong>
+  <%#= @artist.user %>
+</p> -->
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<%= render 'partials/comments' %>
+
+</div>

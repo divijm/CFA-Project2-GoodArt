@@ -42,12 +42,6 @@
 </div>
 
 <div class="container">
-  <% if user_signed_in? %>
-    <% if current_user.artist.present? %>
-      <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
-    <% else %>
-    <% end %>
-      <% end %>
     <div class="card-block">
     <% @artists.each do |artist| %>
     <%= link_to (image_tag(artist.profilepic.url(:medium), :alt => "")), artist %>
@@ -57,6 +51,20 @@
 
 <br>
 <br>
+
+<div class="container">
+  <% if user_signed_in? %>
+    <% if current_user.artist.present? %>
+      <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
+    <% else %>
+    <h3>Are you an Artist?</h3>
+      <%= link_to 'Join as an Artist!', new_artist_path, class: 'btn btn-theme' %>
+    <% end %>
+  <% else %>
+  <h3>Are you an Artist?</h3>
+    <%= link_to 'Join as an Artist!', new_user_registration_path, class: 'btn btn-theme' %>
+  <% end %>
+</div>
 
 <% if user_signed_in? %>
 
@@ -95,30 +103,11 @@
 <% end %>
   <% end %>
 
-  <div class="container">
-    <% if user_signed_in? %>
-      <% if current_user.artist.present? %>
-        <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
-      <% else %>
-      <% end %>
-        <% end %>
-
-  </div>
-
-  </div>
+</div>
 
 <br>
+<br>
 
-<% if user_signed_in? %>
-  <% if current_user.artist.present? %>
-    <%= link_to 'Add New Art', new_art_path %>
-  <% else %>
-    <%= link_to 'Join as an Artist!', new_artist_path %>
-  <% end %>
-<% else %>
-  <%= link_to 'Join as an Artist!', new_user_registration_path %>
-<% end %>
-</div>
 
 <!--
 <div style='width: 800px;'>
