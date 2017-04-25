@@ -11,9 +11,109 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+    <h1>Art for Good.</h1>
+    <h2>Help talented artists who have been impacted by homelessness and disabilities</h2>
+
+      <div id="service">
+         <div class="container">
+           <div class="row centered">
+             <div class="col-md-4">
+               <i class="fa fa-users"></i>
+               <h4>Locally Made</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/artists" class="btn btn-theme">More Info</a></p>
+             </div>
+             <div class="col-md-4">
+               <i class="fa fa-paint-brush"></i>
+               <h4>Quality Artworks</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/arts" class="btn btn-theme">More Info</a></p>
+             </div>
+             <div class="col-md-4">
+               <i class="fa fa-handshake-o"></i>
+               <h4>Art For Good</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/pages/about" class="btn btn-theme">More Info</a></p>
+             </div>
+           </div>
+         </div>
+        </div>
+
+</div>
+
 <!-- *****************************************************************************************************************
 SEARCH AND ARTWORK LOOP
  ***************************************************************************************************************** -->
+
+<div class="container">
+  <% if user_signed_in? %>
+    <% if current_user.artist.present? %>
+      <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
+    <% else %>
+    <% end %>
+      <% end %>
+  <div class="photos">
+    <div class="card-block">
+    <% @arts.each do |art| %>
+    <!-- OH MY FKING GAAAWWWWD!!! THIS LITTLE SHIT TOOK ME MORE THAN 4 HOURS TO FIGURE OUT!!!!!! -->
+    <%= link_to (image_tag(art.image.url(:thumb), :alt => "")), art %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<%#= link_to (image_tag "art.image.url(:thumb)"), art %>
+<%#= link_to art do %>
+<%#= image_tag(art.image.url(:thumb), :alt => "") %>
+<!-- <img src="<%#= art %>" alt="" class="project-logo"> -->
+<%#= link_to(image_tag(art.image.url(:thumb), :alt =>  "alt text", :class =>"anyclass"), art) %>
+<%#= link_to(image_tag('art.image.url(:thumb)', :alt =>  "alt text", :class => "anyclass"), art) %>
+<!-- <a href='<%#= art.image.url(:large) %>' rel="lightbox" title="<%#= art.title %>">
+<%#= image_tag(art.image.url(:thumb)) %>
+</a> -->
+<!-- <div class="product_img"><%#= link_to (image_tag (art.image.url(:thumb))),art %></div> -->
+
+<!-- *****************************************************************************************************************
+ FEATURES
+ ***************************************************************************************************************** -->
+
+ <!-- *****************************************************************************************************************
+    MIDDLE CONTENT
+    ***************************************************************************************************************** -->
+
+    <div class="container">
+      <% if user_signed_in? %>
+        <% if current_user.artist.present? %>
+          <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
+        <% else %>
+          <h3>Are you an Artist?</h3>
+          <%= link_to 'Find out more!', new_artist_path, class: 'btn btn-theme' %>
+        <% end %>
+      <% else %>
+        <h3>Are you an Artist?</h3>
+        <%= link_to 'Find out more!', new_user_registration_path, class: 'btn btn-theme' %>
+      <% end %>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="hline"></div>
+
+    <br>
+    <br>
+<!-- *****************************************************************************************************************
+SEARCH AND TABLE
+ ***************************************************************************************************************** -->
+
+<div class="container-fluid">
+
+   <h1>ADMIN ARTWORK DASHBOARD</h1>
+
+<% if user_signed_in? %>
+
+ <% if current_user.has_role? :admin %>
 
  <div class="container">
    <div class="row row-centre">
@@ -24,37 +124,6 @@ SEARCH AND ARTWORK LOOP
      <% end %>
    </div>
  </div>
-
-<div class="container">
-  <div class="photos">
-    <div class="card-block">
-    <% @arts.each do |art| %>
-    <%#= link_to (image_tag "art.image.url(:thumb)"), art %>
-    <%#= link_to art do %>
-    <%#= image_tag(art.image.url(:thumb), :alt => "") %>
-    <!-- OH MY FKING GAAAWWWWD!!! THIS LITTLE SHIT TOOK ME MORE THAN 4 HOURS TO FIGURE OUT!!!!!! -->
-    <%= link_to (image_tag(art.image.url(:thumb), :alt => "")), art %>
-    <!-- <img src="<%= art %>" alt="" class="project-logo"> -->
-    <%#= link_to(image_tag(art.image.url(:thumb), :alt =>  "alt text", :class =>"anyclass"), art) %>
-    <%#= link_to(image_tag('art.image.url(:thumb)', :alt =>  "alt text", :class => "anyclass"), art) %>
-    <!-- <a href='<%= art.image.url(:large) %>' rel="lightbox" title="<%= art.title %>">
-  <%#= image_tag(art.image.url(:thumb)) %>
-  </a> -->
-
-  <!-- <div class="product_img"><%= link_to (image_tag (art.image.url(:thumb))),art %></div> -->
-
-    <% end %>
-    </div>
-  </div>
-</div>
-
-<!-- *****************************************************************************************************************
-SEARCH AND TABLE
- ***************************************************************************************************************** -->
-
- <% if current_user.has_role? :admin %>
-
-   <h1>ADMIN ARTIST DASHBOARD</h1>
   <table class="table table-hover">
        <thead>
          <tr>
@@ -94,15 +163,7 @@ SEARCH AND TABLE
      </table>
   <%  else %>
   <% end %>
+    <% end %>
+    </div>
 
     <br>
-
-    <% if user_signed_in? %>
-      <% if current_user.artist.present? %>
-        <%= link_to 'Add New Art', new_art_path %>
-      <% else %>
-        <%= link_to 'Join as an Artist!', new_artist_path %>
-      <% end %>
-    <% else %>
-      <%= link_to 'Join as an Artist!', new_user_registration_path %>
-    <% end %>

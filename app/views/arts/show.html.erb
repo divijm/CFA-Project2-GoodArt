@@ -1,11 +1,29 @@
+
+<div id="blue">
+    <div class="container">
+    <div class="row">
+      <h3><%= @art.title %></h3>
+    </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
+<div class="container">
+  <% if user_signed_in? %>
+    <% if current_user.has_role? :admin %>
+    <%= link_to 'Edit', edit_art_path(@art), class: 'btn btn-success' %> |
+    <%= link_to 'Back', arts_path, class: 'btn btn-default'%>
+    <% else %>
+    <%= link_to 'Back', arts_path, class: 'btn btn-default'%>
+    <% end %>
+  <% else %>
+    <%= link_to 'Back', arts_path, class: 'btn btn-default'%>
+  <% end %>
+
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @art.image.url(:medium) %>
+    <hr>
 
-<p>
-  <strong>Title:</strong>
-  <%= @art.title %>
-</p>
+<%= image_tag @art.image.url(:original) %>
 
 <p>
   <strong>Description:</strong>
@@ -13,7 +31,7 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>Price: </strong>$
   <%= @art.price %>
 </p>
 
@@ -51,13 +69,12 @@
 <p>
   <%= render 'partials/stripe', art: @art %>
 </p>
-
 <% else %>
+<h5>Want to buy this painting? Please <%= link_to 'Login', new_user_session_path %> or <%= link_to 'Signup', new_user_registration_path %>!</h5>
 <% end %>
 
 <%= render 'partials/comments' %>
 
 <script id="dsq-count-scr" src="//goodart.disqus.com/count.js" async></script>
 
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+</div>
