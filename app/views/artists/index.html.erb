@@ -1,6 +1,70 @@
+<!-- *****************************************************************************************************************
+ BLUE WRAP
+ ***************************************************************************************************************** -->
+<div id="blue">
+    <div class="container">
+    <div class="row">
+      <h3>Meet Our Artists.</h3>
+    </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
 <p id="notice"><%= notice %></p>
 
-<h1>Artists</h1>
+<div class="container">
+    <h1>We are here for you.</h1>
+    <h2>Good Art supports artists facing homelessness or disabilities. Browse stunning artwork and read their inspiring stories. </h2>
+
+      <div id="service">
+         <div class="container">
+           <div class="row centered">
+             <div class="col-md-4">
+               <i class="fa fa-users"></i>
+               <h4>Locally Made</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/artists" class="btn btn-theme">More Info</a></p>
+             </div>
+             <div class="col-md-4">
+               <i class="fa fa-paint-brush"></i>
+               <h4>Quality Artworks</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/arts" class="btn btn-theme">More Info</a></p>
+             </div>
+             <div class="col-md-4">
+               <i class="fa fa-handshake-o"></i>
+               <h4>Art For Good</h4>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+               <p><br/><a href="/pages/about" class="btn btn-theme">More Info</a></p>
+             </div>
+           </div>
+         </div>
+        </div>
+</div>
+
+<div class="container">
+  <% if user_signed_in? %>
+    <% if current_user.artist.present? %>
+      <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
+    <% else %>
+    <% end %>
+      <% end %>
+    <div class="card-block">
+    <% @artists.each do |artist| %>
+    <%= link_to (image_tag(artist.profilepic.url(:medium), :alt => "")), artist %>
+    <% end %>
+    </div>
+</div>
+
+<br>
+<br>
+
+<% if user_signed_in? %>
+
+<% if current_user.has_role? :admin %>
+
+<div class="container-fluid">
+
+  <h1>ADMIN ARTIST DASHBOARD</h1>
 
 <table class="table table-hover">
   <thead>
@@ -27,6 +91,21 @@
     <% end %>
   </tbody>
 </table>
+<%  else %>
+<% end %>
+  <% end %>
+
+  <div class="container">
+    <% if user_signed_in? %>
+      <% if current_user.artist.present? %>
+        <%= link_to 'Add New Art', new_art_path, class: 'btn btn-theme' %>
+      <% else %>
+      <% end %>
+        <% end %>
+
+  </div>
+
+  </div>
 
 <br>
 
@@ -39,6 +118,8 @@
 <% else %>
   <%= link_to 'Join as an Artist!', new_user_registration_path %>
 <% end %>
+</div>
+
 <!--
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>

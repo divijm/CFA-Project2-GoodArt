@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@artists) do |artist, marker|
     marker.lat artist.latitude
     marker.lng artist.longitude
-    end   
+    end
   end
 
   # GET /artists/1
@@ -33,7 +33,7 @@ class ArtistsController < ApplicationController
 
     respond_to do |format|
       if @artist.save
-        format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
+        format.html { redirect_to artists_path, notice: 'Artist was successfully created.' }
         format.json { render :show, status: :created, location: @artist }
       else
         format.html { render :new }
