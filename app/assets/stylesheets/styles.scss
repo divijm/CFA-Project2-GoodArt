@@ -71,6 +71,26 @@ a:focus {
 	text-align: center
 }
 
+
+
+.jumbotron {
+position: relative;
+background: url("http://i.imgur.com/CYdWHyK.jpg") no-repeat center center fixed;
+width:100%;
+height: 100vh;
+background-size: 100% 100%;
+font-weight: 900 !important;
+color: #000000 !important;
+-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.header {
+font-weight: 900 !important;
+font-size: 8em;
+}
 /*	################################################################
 	BOOTSTRAP MODIFICATIONS & TWEAKS
 ################################################################# */
@@ -199,22 +219,9 @@ a:focus {
 	margin-bottom: 25px;
 }
 
-
-/*	################################################################
-GALLERY
-################################################################# */
-
-.gallery .caption { margin: 5px 0 15px; padding: 0 15px; }
-.gallery [class^="col-"] { padding: 0; }
-
-@media (min-width: 768px) {
-.gallery .row { margin: 0; }
-.gallery .caption { display: none; }
-}
 /*	################################################################
 	SITE WRAPS
 ################################################################# */
-
 
 #headerwrap {
 	background-color: #00b3fe;
@@ -519,44 +526,6 @@ csmall2 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-/* Blog Page */
-.popular-posts {
-	margin: 0px;
-	padding-left: 0px;
-	}
-
-.popular-posts li {
-	list-style: none;
-	margin-bottom: 20px;
-	min-height: 70px;
-}
-.popular-posts li a,
-.popular-posts li a:hover {
-	color:#2f2f2f;
-	text-decoration: none;
-	}
-
-.popular-posts li img {
-	float: left;
-	margin-right: 20px;
-	}
-
-.popular-posts li em {
-	font-family: 'Lato', sans-serif;
-	font-size: 12px;
-	color: #b3b3b3
-	}
-
-.popular-posts p {
-	line-height: normal;
-	margin-bottom: auto;
-}
-
-.share i {
-	padding-right: 15px;
-	font-size: 18px;
 }
 
 .form-input {
