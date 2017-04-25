@@ -98,22 +98,19 @@ SEARCH AND ARTWORK LOOP
 
     <br>
     <br>
-
-    <div class="hline"></div>
-
-    <br>
     <br>
 <!-- *****************************************************************************************************************
 SEARCH AND TABLE
  ***************************************************************************************************************** -->
 
-<div class="container-fluid">
-
-   <h1>ADMIN ARTWORK DASHBOARD</h1>
 
 <% if user_signed_in? %>
 
  <% if current_user.has_role? :admin %>
+ <div class="container-fluid">
+
+    <h1>ADMIN ARTWORK DASHBOARD</h1>
+
 
  <div class="container">
    <div class="row row-centre">
