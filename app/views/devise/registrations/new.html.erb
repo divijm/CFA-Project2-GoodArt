@@ -13,36 +13,30 @@
 
   <div class="form-group">
       <div class="col-md-12">
-          <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               <div class="field">
-                <%= f.email_field :email, autofocus: true, placeholder: 'Username', class: 'form-control' %>
+                <%= f.email_field :email, autofocus: true, placeholder: 'Username', class: 'form-control, input-group' %>
               </div>
-          </div>
       </div>
   </div>
 
   <div class="form-group">
       <div class="col-md-12">
-          <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               <div class="field">
                 <% if @minimum_password_length %>
                 <% end %>
-                <%= f.password_field :password, autocomplete: "off", placeholder: 'Password (6 characters minimum)', class: 'form-control' %>
+                <%= f.password_field :password, autocomplete: "off", placeholder: 'Password (6 characters minimum)', class: 'form-control, input-group' %>
               </div>
-          </div>
       </div>
   </div>
 
   <div class="form-group">
       <div class="col-md-12">
-          <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               <div class="field">
-                <%= f.password_field :password, autocomplete: "off", placeholder: 'Password Confirmation', class: 'form-control' %>
+                <%= f.password_field :password, autocomplete: "off", placeholder: 'Password Confirmation', class: 'form-control, input-group' %>
               </div>
-          </div>
       </div>
   </div>
 
