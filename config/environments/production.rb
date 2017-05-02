@@ -27,14 +27,14 @@ Rails.application.configure do
 
   # config/environments/production.rb
   config.paperclip_defaults = {
-    storage: :s3,
-    s3_credentials: {
-      bucket: ENV.fetch('S3_BUCKET_NAME'),
-      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-      s3_region: ENV.fetch('AWS_REGION'),
-    }
+  storage: :s3,
+  s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET_NAME'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
   }
+}
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
