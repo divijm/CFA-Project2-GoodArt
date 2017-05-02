@@ -25,6 +25,7 @@ gem 'ransack'
 gem 'stripe'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri
