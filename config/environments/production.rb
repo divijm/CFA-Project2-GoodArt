@@ -64,6 +64,15 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mailgun.org',
+    port:                     587,
+    domain:               ENV["MAILGUN_DOMAIN_URL"],
+    user_name:            ENV["MAILGUN_DEFAULT_SMTP"],
+    password:             ENV["MAILGUN_PASSWORD"],
+    authentication:       'plain' }
+
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "GoodArt_#{Rails.env}"
