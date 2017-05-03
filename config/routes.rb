@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/thoughts'
   get 'contact', to: "contact#index"
-  post 'contact', to: "contact#mail"
+  post 'contact', to: "contact#mail", :as => :contact_mail
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

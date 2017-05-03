@@ -30,8 +30,7 @@ FLASH NOTICE
       <h4>Let's Get In Touch!</h4>
       <div class="hline"></div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        <form role="form">
-          <%= simple_form_for :contact do |f| %>
+          <%= simple_form_for :contact, :url => contact_mail_path, :method => :post do |f| %>
           <div class="form-group">
             <label>Email</label>
             <%= f.input :email, label: false, class: 'form-input' %>
@@ -44,7 +43,6 @@ FLASH NOTICE
             <%= f.submit 'Submit', class: 'btn btn-theme' %>
           </div>
           <% end %>
-        </form>
     </div>
 
     <div class="col-lg-4">
