@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+/* line 9, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+::-moz-selection {
+  background: #f2c2c9;
+  color: #a4003a;
+  text-shadow: none;
+}
+
+/* line 15, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+::selection {
+  background: #16a085;
+  color: #a4003a;
+  text-shadow: none;
+}
+
+/* line 21, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 30, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 34, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.mt {
+  margin-top: 80px;
+}
+
+/* line 38, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.mb {
+  margin-bottom: 80px;
+}
+
+/* line 44, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 53, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+/* line 60, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* line 64, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.navbar-default .navbar-brand {
+  color: #1abc9c;
+}
+
+/* line 68, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* line 73, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #1abc9c;
+  background-color: transparent;
+  border-bottom: 2px solid #1abc9c;
+}
+
+/* line 79, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #1abc9c;
+}
+
+/* line 85, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#jumbotron {
+  position: relative;
+  background: url("bg.jpg") no-repeat center center fixed;
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  padding-top: 250px;
+  text-align: center;
+  font-weight: 900 !important;
+  color: #000000 !important;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+/* line 105, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.quotes {
+  display: none;
+}
+
+/* line 109, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#blue {
+  background: #00b3fe;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+/* line 117, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#blue h3 {
+  color: white;
+  margin-left: 15px;
+}
+
+/* line 122, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#headerwrap h1 {
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 4px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+/* line 131, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#headerwrap h4 {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* line 136, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#social {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f2f2f2;
+}
+
+/* line 142, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#social i {
+  font-size: 40px;
+  color: #4a4a4a;
+}
+
+/* line 147, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#social i:hover {
+  color: #1abc9c;
+}
+
+/* line 151, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#footerwrap {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: #2f2f2f;
+}
+
+/* line 157, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#footerwrap p {
+  color: #f2f2f2;
+  margin-left: 10px;
+}
+
+/* line 162, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#workwrap {
+  background: url(../img/work.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 183, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#workwrap h1 {
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 4px;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+/* line 192, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#workwrap h4 {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* line 197, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+#aboutwrap {
+  background: url(../img/about.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 550px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+/* line 218, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.gallery {
+  margin-top: 30px;
+}
+
+/* line 222, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.gallery img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 227, /Users/divijm/Google Drive/Coder Factory/CFA Fast Track/exercises/term_1/week_4/portfolio_updated/personalp_dm/app/assets/stylesheets/pages.scss */
+.gallery img:hover {
+  opacity: 0.7;
+}

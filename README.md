@@ -2,6 +2,11 @@
 
 Good Art empowers artists living with homelessness or disabilities through the celebration and sale of their artwork. Good Art is about creating opportunity, empowerment, and validation. This project was created as part of our second major project at Coder Factory Academy.
 
+### How to access
+
+https://good-art-dm.herokuapp.com/.
+Best used with Google Chrome.
+
 ## Overview
 
 1. Project Brief
